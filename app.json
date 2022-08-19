@@ -1,0 +1,7 @@
+{
+    "name": "General Mathematics",
+    "description": "Educational Site",
+    "repository": "https://github.com/GeneralMathematics/General-Mathematics-Beta",
+    "logo": "https://github.com/GeneralMathematics/General-Mathematics-Beta/blob/main/static/img/icons/math.png",
+    "keywords": ["GeneralMathematics", "educational", "science", "math"]
+}

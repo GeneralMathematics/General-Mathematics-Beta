@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import 'https://fonts.googleapis.com/css2?family=Cabin&display=swap';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+:root {
+    --background: #24223e;
+    --sidebarcolor1: #11101d;
+    --sidebarcolor2: #fff;
+    --textcolor: #fff;
+}
+
+/* Generic CSS */
+
+
+body {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--background);  
+    min-height: 100vh;
+}
+
+/* Contains CSS for the Sidebar AKA: Navigation Bar */
+
+
+.sidebar {
+    position: fixed;
+    height: 100%;
+    width: 78px;
+    top: 0;
+    left: 0;
+    background: var(--sidebarcolor1);
+    padding: 6px 14px;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active {
+    width: 240px;
+}
+
+.sidebar .logo_content .logo {
+    color: var(--sidebarcolor2);
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active .logo_content .logo {
+    opacity: 1;
+    pointer-events: none;
+}
+
+.logo_content .logo i {
+    font-size: 28px;
+    margin-right: 5px;
+}
+
+.logo_content .logo .logo_name {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.sidebar #btn {
+    position: absolute;
+    color: var(--sidebarcolor2);
+    left: 50%;
+    top: 6px;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%);
+}
+
+.sidebar.active #btn {
+    left: 90%;
+}
+
+.sidebar ul {
+    margin-top: 20px;
+}
+
+.sidebar ul li {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin: 0 5px;
+    list-style: none;
+    line-height: 50px;
+}
+
+.sidebar ul li a {
+    color: var(--sidebarcolor2);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    border-radius: 12px;
+    white-space: nowrap;
+}
+
+.sidebar ul li a:hover {
+    color: var(--sidebarcolor1);
+    background: var(--sidebarcolor2);
+}
+
+.sidebar ul li a i {
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.sidebar .links_name {
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active .links_name {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Contains CSS for Content on the Homepage */
+
+.home_content {
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 78px);
+    left: 78px;
+    transition: all 0.5s ease;
+    background: var(--background);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.home_content h1 {
+    text-align: center;
+    margin-top: 15%;
+    font-size: 3em;
+    color: var(--textcolor);
+}
+
+.sidebar.active ~ .home_content {
+    width: calc(100% - 240px);
+    left: 240px;
+}
+
+.home_content .wrapper {
+    display: grid;
+    place-items: center;
+}
+
+.home_content .typing {
+    width: 54ch;
+    animation: typing 4s steps(58), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-size: 2em;
+    font-family: 'Poppins';
+    color: var(--textcolor);
+}
+
+/* Keyframes for typing animation on the homepage */
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Contains CSS for Content on the Settings Page */
+
+.background_content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: all 0.5s ease;
+    background: var(--background);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-align: center;
+}
+
+.sidebar.active ~ .background_content {
+    width: calc(100% - 240px);
+    left: 240px;
+}
+
+
+.sidebar.active ~ .background_content .nav {
+    left: 240px;
+}
+
+.background_content .nav {
+    position: fixed;
+    height: 100%;
+    background: var(--sidebarcolor1);
+    padding: 6px 14px;
+    transition: all 0.5s ease;
+}
+
+.background_content ul li {
+    height: 50px;
+    width: 100%;
+    list-style: none;
+    line-height: 50px;
+}
+
+.background_content ul li a {
+    color: var(--sidebarcolor2);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    border-radius: 12px;
+    white-space: nowrap;
+}
+
+.background_content ul li a:hover {
+    color: var(--sidebarcolor1);
+    background: var(--sidebarcolor2);
+}
+
+.background_content ul li a i {
+    height: 50px;
+    min-width: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.background_content h1 {
+    text-align: center;
+    margin-top: 7%;
+    font-size: 3em;
+    color: var(--textcolor);
+}
+
+.background_content h2 {
+    margin-top: 20px;
+    font-size: 40px;
+    color: var(--textcolor);
+}
+
+.background_content h3 {
+    margin-top: 40px;
+    font-size: 40px;
+    color: var(--textcolor);
+}
+
+.background_content select {
+    margin-top: 10px;
+    height: 25px;
+    border-radius: 5px;
+}
+
+/* Buttons */
+
+button{
+    margin-left:25%;
+    margin-right:25%;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    border: 2px solid var(--textcolor);
+    background: transparent;
+    color: var(--textcolor);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    height: 150px;
+}
+
+.imagebutton {
+color: transparent;
+width: 150px;
+padding: 15px 0;
+text-align: center;
+margin: 20px 10px;
+border-radius: 20px;
+border: 0px solid var(--textcolor);
+font-weight: bold;
+background: transparent;
+cursor: pointer;
+overflow: hidden;
+transition: all 0.5s ease;
+height: 150px;
+}
+   
+button:hover{
+    -webkit-transition: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 1.5s ease;
+    text-decoration: none;
+}
+
+.filtertext
+{
+color: var(--textcolor);
+}
+
+h1 {
+    color: var(--textcolor);
+    text-align: center;
+    align-self: center;
+    align-content: center;
+}
+
+h2 {
+    color: var(--textcolor);
+    text-align: center;
+    align-self: center;
+    align-content: center;
+    display: inline-block;
+}
+
+footer{
+    background-color:#d3d3d3;
+    font-family:cabin,sans-serif;
+    display:flex;
+    align-items:center;
+    text-align:center;
+    justify-content:space-between;
+    color:#000;
+    font-size:20px;
+    margin-top: 100px;
+}
+
+#fullscreen {
+    
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/3744450/man.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    
+}
+
+#particles-js {
+    
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/3744450/man.jpeg');
+    background-size: cover;
+    background-position: center;
+    
+}
+
+#particles-js h1{
+    
+    font-size: 50px;
+    position: absolute;
+    top: 270px;
+    left: 500px;
+    font-weight: 200;
+    color:aquamarine;
+}
+

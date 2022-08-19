@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>General Mathematics</title>
+  <!-- Meta/Info Attributes -->
+  <link rel = "icon" href = "./img/icons/math.ico" type = "image/x-icon">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./loader.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Boxicons CDN Link -->
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Link to CSS Stylesheet -->
+  <link rel="stylesheet" href="./main.css">
+  <script async src="https://arc.io/widget.min.js#9ZPmVbkC"></script>
+</head>
+<div class="background_content">
+<body>
+ <!--- Sidebar / Navigation Bar-->
+ <div class="sidebar">
+    <!-- Sidebar Logo Content -->
+    <div class="logo_content">
+        <div class="logo">
+            <!-- Sidebar Logo -->
+            <i class='bx bxl-google' id="menu"></i>
+            <!-- Sidebar Title -->
+            <div class="logo_name">GeneralMath</div>
+        </div>
+        <i class='bx bx-menu' id="btn"></i>
+    </div>
+    <ul class="nav_list" style="z-index:9999; position:relative">
+
+        <!-- Home Icon and Title on the Sidebar -->
+        <li>
+            <a href="./menu.html">
+                <i class='bx bx-home' ></i>
+                <span class="links_name">Home</span>
+            </a>
+        </li>
+        <!-- Proxy Icon and Title on the Sidebar -->                
+        <li>
+            <a href="./search.html">
+                <i class='bx bx-window' ></i>
+                <span class="links_name">Search</span>
+            </a>
+        </li>                
+        <!-- Games Icon and Title on the Sidebar -->
+        <li>
+            <a href="./g.html">
+                <i class='bx bxs-invader' ></i>
+                <span class="links_name">Games</span>
+            </a>
+        </li>                
+        <!-- Sites Icon and Title on the Sidebar -->
+        <li>
+            <a href="./sites.html">
+                <i class='bx bxs-grid' ></i>
+                <span class="links_name">Sites</span>
+            </a>
+        </li>
+        <!-- Support Icon and Title on the Sidebar -->
+        <li>
+            <a href="./support.html">
+                <i class='bx bx-question-mark' ></i>
+                <span class="links_name">Support</span>
+            </a>
+        </li>   
+        <!-- Community Icon and Title on the Sidebar -->             
+        <li>
+            <a href="https://discord.com/invite/cNfDWcA64K" target="_blank">
+                <i class='bx bx-chat' ></i>
+                <span class="links_name">Community</span>
+            </a>
+        </li>
+        <!-- Patreon Icon and Title on the Sidebar -->
+        <li>
+            <a href="https://patreon.com/generalmathematics" target="_blank">
+                <i class='bx bxl-patreon'></i>
+                <span class="links_name">Patreon</span>
+            </a>
+        </li>
+        <!-- Settings Icon and Title on the Sidebar -->
+        <li>
+            <a href="./settings.html">
+                <i class='bx bx-slider-alt' ></i>
+                <span class="links_name">Settings</span>
+            </a>
+        </li>
+        <li>
+            <a href="./privacy.html">
+                <i class='bx bx-fingerprint'></i>
+                <span class="links_name">Privacy</span>
+            </a>
+        </li>
+        <li>
+            <a href="./terms.html">
+                <i class='bx bx-clipboard'></i>
+                <span class="links_name">Terms</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="home_content">
+    <h1> General Mathematics </h1>
+    <div style="text-align:center">   
+        <button style="width:100px;height: 50px;" type="button" style="font-family: 'Noto Sans'" onclick="window.location.href='/gfiles/flash/'">Upload SWF</button>
+        <button style="width:100px;height: 50px;" type="button" style="font-family: 'Noto Sans'" onclick="shuffle( document.querySelectorAll('#random > button') )">Shuffle</button>
+        <button style="width:110px;height: 50px;" type="button" style="font-family: 'Noto Sans'" onclick="eval(document.querySelectorAll('#random > button')[Math.floor(Math.random() * document.querySelectorAll('#random > button').length)].onclick)()">Random Game</button>
+      </div>
+      <div style="text-align:center">
+        <button style="width:100px;height: 50px;" type="button" onclick="var menu = document.querySelectorAll('#random > button');for (var i = 0; menu[i]; i++) {menu[i].style.display = 'inline'};document.getElementById('filtertext').innerHTML ='Curently Showing: ALL'">All</button>
+        <button style="width:100px;height: 50px;" type="button" onclick="hidebyID('web');document.getElementById('filtertext').innerHTML ='Curently Showing: WEB'">Web</button>
+        <button style="width:100px;height: 50px;" type="button" onclick="hidebyID('flash');document.getElementById('filtertext').innerHTML ='Curently Showing: FLASH'">Flash</button>
+        <button style="width:100px;height: 50px;" type="button" onclick="hidebyID('online');document.getElementById('filtertext').innerHTML ='Curently Showing: ONLINE'">Online</button>
+        <button style="width:100px;height: 50px;" type="button" onclick="hidebyID('pvp');document.getElementById('filtertext').innerHTML ='Curently Showing: PVP'">PvP</button>
+        <button style="width:100px;height: 50px;" type="button" onclick="hidebyID('poki');document.getElementById('filtertext').innerHTML ='Curently Showing: POKI'">Poki</button>
+        <button style="width:100px;height: 50px;" type="button" onclick="hidebyID('coolmath');document.getElementById('filtertext').innerHTML ='Curently Showing: COOLMATH'">CoolMath</button>
+        <div>
+      </div>
+      </div>
+      <div style="text-align:center;" id="filtertext" class="filtertext">Curently Showing: ALL</div>
+      <!-- Favorite Games. -->
+        <form>
+        <div style="text-align:center; margin-left: 1%;" id="random">
+        <button class="search imagebutton" style="background-image: url(./img/games/emulator.png); background-repeat: none;" onclick="window.location.href='./integrations/emulatorjs/index.html';timer()">EmulatorJS</button>
+        <button class="web pvp online search imagebutton" style="background-image: url(./img/games/krunker.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://krunker.io'); timer()">Krunker</button>
+        <button class="web pvp online search imagebutton" style="background-image: url(./img/games/skribbl.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://skribbl.io'); timer()">Skribbl.io</button>
+        <button class="web pvp online search imagebutton" style="background-image: url(./img/games/slitherio.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://slither.io'); timer()">Slither.io</button>
+        <button class="web pvp online search imagebutton" style="background-image: url(./img/games/stumble.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://now.gg/apps/kitka-games/7999/stumble-guys.html'); timer()">Stumble Guys</button>
+        <button class="web search imagebutton" style="background-image: url(./img/games/1v1lol.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://1v1.lol'); timer()">1v1.LOL</button>
+        <button class="web pvp online search imagebutton" style="background-image: url(./img/games/justfall.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://justfall.lol'); timer()">JustFall.LOL</button>
+        <button class="web search imagebutton" style="background-image: url(./img/games/cookieclicker.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://orteil.dashnet.org/cookieclicker/'); timer()">Cookie Clicker</button>
+        <button class="web online search imagebutton" style="background-image: url(./img/games/lolbeans.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://lolbeans.io'); timer()">LOLBeans.io</button>
+        <button class="web search imagebutton" style="background-image: url(./img/games/retrobowl.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://game316009.konggames.com/gamez/0031/6009/live/index.html'); timer()">RetroBowl</button>
+        <button class="web search imagebutton" style="background-image: url(./img/games/ninjaio.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://ninja.io'); timer()">Ninja.io</button>
+        <button class="web pvp online search imagebutton" style="background-image: url(./img/games/evio.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://ev.io'); timer()">Ev.io</button>
+        <button class="web online search imagebutton" style="background-image: url(./img/games/cutrope.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://app-97515.games.s3.yandex.net/97515/u1824c0o9xlk2nm9hlcxtbs4l6ysl44s/index.html')">Cut the Rope</button>
+        <button class="web online search imagebutton" style="background-image: url(./img/games/amongus.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://now.gg/apps/innersloth-llc/4047/among-us.html'); timer()">Among Us</button>
+        <button class="web online search imagebutton" style="background-image: url(./img/games/roblox.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://now.gg/apps/roblox-corporation/5349/roblox.html'); timer()">Roblox</button>
+        <button class="web online search imagebutton" style="background-image: url(./img/games/gachalife.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://now.gg/apps/lunime/5767/gacha-life.html'); timer()">Gacha Life</button>
+        <button class="web search imagebutton" style="background-image: url(./img/games/worldshardestgame.jpg); background-repeat: none;" onclick="window.location.href='./gfiles/swf/wordlshardestgame.html'">Worlds Hardest Game</button>
+        <button class="web search imagebutton" style="background-image: url(./img/games/impossiblequiz.jpg); background-repeat: none;" onclick="window.location.href='./gfiles/swf/impossiblequiz.html'">Impossible Quiz</button>
+        <button class="web search imagebutton" style="background-image: url(./img/games/impossible2.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://poki.com/en/g/the-impossible-quiz-2'); timer()">Impossible Quiz 2</button>
+        <button class="web online search imagebutton" style="background-image: url(./img/games/happywheels.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://totaljerkface.com/happy_wheels.tjf'); timer()">Happy Wheels</button>
+        <button class="web search imagebutton" style="background-image: url(./img/games/learntofly.jpg); background-repeat: none;" onclick="window.location.href='./gfiles/swf/learntofly.html'">Learn to Fly</button>
+        <button class="web search imagebutton" style="background-image: url(./img/games/bloonstd.jpg); background-repeat: none;" onclick="window.location.href='./gfiles/swf/bloonstd1.html'">Bloons TD</button>
+        <button class="web search imagebutton" style="background-image: url(./img/games/bloonstd2.jpg); background-repeat: none;" onclick="window.location.href='./gfiles/swf/bloonstd2.html'">Bloons TD2</button>
+        <button class="web online search imagebutton" style="background-image: url(./img/games/bloonstd4.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://cdn2.addictinggames.com/addictinggames-content/ag-assets/content-items/html5-games/bloonstowerdefense4/index.html '); timer()">Bloons TD4</button>
+        <button class="web search imagebutton" style="background-image: url(./img/games/ducklife.jpg); background-repeat: none;" onclick="window.location.href='./gfiles/swf/ducklife.html'">Ducklife</button>
+        <button class="web search imagebutton" style="background-image: url(./img/games/ducklife2.jpg); background-repeat: none;" onclick="window.location.href='./gfiles/swf/ducklife2.html'">Ducklife 2</button>
+        <button class="web search imagebutton" style="background-image: url(./img/games/ducklife3.jpg); background-repeat: none;" onclick="window.location.href='./gfiles/swf/ducklife3.html'">Ducklife 3</button>
+        <button class="web search imagebutton" style="background-image: url(./img/games/ducklife4.jpg); background-repeat: none;" onclick="window.location.href='./gfiles/swf/ducklife4.html'">Ducklife 4</button>
+        <button class="web online search imagebutton" style="background-image: url(./img/games/minecraft.jpg); background-repeat: none;" onclick="window.location.href='./integrations/eaglercraft/web/index.html'">Minecraft</button>
+        <button class="web online search imagebutton" style="background-image: url(./img/games/minecraftb.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://now.gg/apps/mojang/2534/minecraft-trial.html'); timer()">Minecraft Bedrock</button>
+        <button class="web online search imagebutton" style="background-image: url(./img/games/papper.io.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://paper-io.com'); timer()">Paper.io 2</button>
+        <button class="web pvp online search imagebutton" style="background-image: url(./img/games/defly.io.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://defly.io'); timer()">Defly.io</button>
+        <button class="web pvp online search imagebutton" style="background-image: url(./img/games/Hole.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://hole-io.com'); timer()">Hole.io</button>
+        <button class="web search imagebutton" style="background-image: url(./img/games/flappybird.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://flappybird.io'); timer()">Flappybird</button>
+        <button class="web search imagebutton" style="background-image: url(./img/games/fnaf.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://scratch.iogames.repl.co/app.html?id=217819833&turbo=false&full-screen=true')">FNAF</button>
+        <button class="web search imagebutton" style="background-image: url(./img/games/fnaf2.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://scratch.iogames.repl.co/app.html?id=220004826&turbo=false&full-screen=true')">FNAF 2</button>
+        <button class="web search imagebutton" style="background-image: url(./img/games/fnaf3.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://scratch.iogames.repl.co/app.html?id=88678420&turbo=false&full-screen=true')">FNAF 3</button>
+        <button class="web search imagebutton" style="background-image: url(./img/games/fnaf4.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://scratch.iogames.repl.co/app.html?id=88676888&turbo=false&full-screen=true')">FNAF 4</button>
+        <button class="web search imagebutton" style="background-image: url(./img/games/geometrydash.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://scratch.iogames.repl.co/app.html?id=105500895&turbo=false&full-screen=true')">Geometry Dash</button>
+        <button class="web search imagebutton" style="background-image: url(./img/games/bomberman.jpg); background-repeat: none;" onclick="window.location.href='./gfiles/swf/bomberman.html'">Bomberman</button>
+        <button class="web search imagebutton" style="background-image: url(./img/games/pacman.jpg); background-repeat: none;" onclick="window.location.href='./gfiles/swf/pacman.html'">Pacman</button>
+        <button class="web search imagebutton" style="background-image: url(./img/games/funkin.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://www.newgrounds.com/portal/view/770371'); timer()">Friday Night Funkin</button>
+        <button class="web pvp online search imagebutton" style="background-image: url(./img/games/brutal.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://brutal.io'); timer()">Brutal.io</button>
+        <button class="web pvp online search imagebutton" style="background-image: url(./img/games/zombsroyale.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://zombsroyale.io'); timer()">Zombsroyale</button>
+        <button class="web pvp online search imagebutton" style="background-image: url(./img/games/powerline.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://powerline.io'); timer()">Powerline.io</button>
+        <button class="web pvp online search imagebutton" style="background-image: url(./img/games/lordz.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://lordz.io'); timer()">Lordz.io</button>
+        <button class="web pvp online search imagebutton" style="background-image: url(./img/games/csgo.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://play.geforcenow.com/games?game-id=39699fb7-5a05-41e6-86b2-3cd6fd6c459c&lang=en_GB&asset-id=01_eed40f57-32d7-43ab-808b-6c7aa65191dd'); timer()">CSGO</button>
+        <button class="web pvp online search imagebutton" style="background-image: url(./img/games/venge.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://venge.io'); timer()">Venge.io</button>
+        <button class="web pvp online search imagebutton" style="background-image: url(./img/games/pubg.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://now.gg/play/proxima-beta/2609/pubg-mobile-resistance'); timer()">PUBG</button>
+        <button class="web pvp online search imagebutton" style="background-image: url(./img/games/merc.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://merc.zone'); timer()">Merc Zone</button>
+        <button class="web search imagebutton" style="background-image: url(./img/games/alchemy.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://littlealchemy.com/'); timer()">Little Alchemy</button>
+        <button class="web search imagebutton" style="background-image: url(./img/games/alchemy2.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://littlealchemy2.com/'); timer()">Little Alchemy 2</button>
+        <button class="web search imagebutton" style="background-image: url(./img/games/enchantedcave2.jpg); background-repeat: none;" onclick="window.location.href='./gfiles/swf/enchantedcave2.html'">Enchanted Cave 2</button>
+          <button class="web search imagebutton" style="background-image: url(./img/games/slope.jpg); background-repeat: none;" onclick="window.location.href='./gfiles/slope/index.html'">Slope</button>
+        <button class="web search imagebutton" style="background-image: url(./img/games/wordle.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://nytimes.com/games/wordle/index.html'); timer()">Wordle</button>
+        <button class="web pvp online search imagebutton" style="background-image: url(./img/games/osuweb.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://osugame.online'); timer()">Osu!</button>
+        <button class="web search imagebutton" style="background-image: url(./img/games/mtsl.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://csgo.mtsl.dk'); timer()">CSGO Case Clicker 2!</button>
+        <button class="web search imagebutton" style="background-image: url(./img/games/cuphead.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://scratch.iogames.repl.co/app.html?id=178944041&turbo=false&full-screen=true'); timer()">Osu!</button>
+        <button class="web search imagebutton" style="background-image: url(./img/games/cluster.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://kbhgames.com/game/cluster-truck-online'); timer()">Cluster Truck</button>
+        <button class="web search imagebutton" style="background-image: url(./img/games/drifthunters.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://drift-hunters.co'); timer()">Drift Hunters</button>
+        <button class="web online search imagebutton" style="background-image: url(./img/games/uno.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://showcase.codethislab.com/games/multiplayer/four_colors/'); timer()">UNO</button>
+      <!-- Poki Games -->
+        <button class="web pvp poki search imagebutton" style="background-image: url(./img/games/rooftop.jpg); background-repeat: none;" onclick="window.location.href='./gfiles/rooftop/index.html'">Rooftop Snipers</button>
+        <button class="web pvp poki search imagebutton" style="background-image: url(./img/games/rooftopsnipers2.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://poki.com/en/g/rooftop-snipers-2'); timer()">Rooftop Snipers 2</button>
+        <button class="web pvp poki search imagebutton" style="background-image: url(./img/games/shootout.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://poki.com/en/g/getaway-shootout#fullscreen'); timer()">Getway Shootout</button>
+        <button class="web poki search imagebutton" style="background-image: url(./img/games/sportcars2.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://topspeed.com/car-games/madalin-stunt-cars-2'); timer()">Madalin Stunt Cars 2</button>
+        <button class="web poki search imagebutton" style="background-image: url(./img/games/darkroom.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://adarkroom.doublespeakgames.com/'); timer()">A Dark Room</button>
+        <button class="web poki search imagebutton" style="background-image: url(./img/games/tunnelrush.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://tunnelrushgames.com'); timer()">TunnelRush</button>
+        <button class="web poki search imagebutton" style="background-image: url(./img/games/tunnelrush2.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://poki.com/en/g/tunnel-rush-2'); timer()">TunnelRush 2</button>
+        <button class="web poki search imagebutton" style="background-image: url(./img/games/basketballstars.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://poki.com/en/g/basketball-stars'); timer()">Basketball Stars</button>
+        <button class="web poki search imagebutton" style="background-image: url(./img/games/basketballstars2020.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://poki.com/en/g/basketball-legends-2020'); timer()">Basketball Stars 2020</button>
+        <button class="web poki search imagebutton" style="background-image: url(./img/games/subwaysurfers.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://poki.com/en/g/subway-surfers'); timer()">Subway Surfers</button>
+        <button class="web poki search imagebutton" style="background-image: url(./img/games/soccer.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://poki.com/en/g/football-legends'); timer()">Soccer Masters</button>
+        <button class="web poki search imagebutton" style="background-image: url(./img/games/stickmanhook.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://poki.com/en/g/stickman-hook'); timer()">Stickman Hook</button>
+        <button class="web poki search imagebutton" style="background-image: url(./img/games/tinyfishing.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://poki.com/en/g/tiny-fishing'); timer()">Tiny Fishing</button>
+        <button class="web poki search imagebutton" style="background-image: url(./img/games/papapizzaattack.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://poki.com/en/g/papa-louie-when-pizzas-attack'); timer()">Papa Louie Pizza</button>
+        <button class="web poki search imagebutton" style="background-image: url(./img/games/papa3.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://poki.com/en/g/papa-louie-3'); timer()">Papa Louie 3</button>
+        <button class="web poki search imagebutton" style="background-image: url(./img/games/papataco.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://poki.com/en/g/papas-taco-mia'); timer()">Papa's Taco Mia</button>
+        <button class="web poki search imagebutton" style="background-image: url(./img/games/papaburger.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://poki.com/en/g/papas-burgeria'); timer()">Papa's Burgeria</button>
+        <button class="web poki search imagebutton" style="background-image: url(./img/games/papapizza.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://poki.com/en/g/papas-pizzeria'); timer()">Papa's Pizzeria</button>
+        <button class="web poki search imagebutton" style="background-image: url(./img/games/temple2.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://poki.com/en/g/temple-run-2'); timer()">Temple Run 2</button>
+        <button class="web poki search imagebutton" style="background-image: url(./img/games/crossyroad.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://poki.com/en/g/crossy-road'); timer()">Crossy Road</button>
+        <button class="web poki search imagebutton" style="background-image: url(./img/games/pianotiles2.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://poki.com/en/g/piano-tiles-2'); timer()">Piano Tiles 2</button>
+        <button class="web poki search imagebutton" style="background-image: url(./img/games/superhot.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://poki.com/en/g/superhot-prototype'); timer()">Superhot</button>
+        <button class="web poki search imagebutton" style="background-image: url(./img/games/googlefeud.png); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://poki.com/en/g/google-feud'); timer()">Google Feud</button>
+        <button class="web online poki search imagebutton" style="background-image: url(./img/games/smashkarts.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://poki.com/en/g/smash-karts'); timer()">Smash Karts</button>
+        <button class="web poki search imagebutton" style="background-image: url(./img/games/become.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://poki.com/en/g/we-become-what-we-behold'); timer()">Become</button>
+      <!-- Cool Math Games. -->
+        <button class="web coolmath search imagebutton" style="background-image: url(./img/games/fireboywatergirl.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://coolmathgames.com/0-fireboy-and-water-girl-in-the-forest-temple'); timer()">Fireboy & Watergirl 1</button>
+        <button class="web coolmath search imagebutton" style="background-image: url(./img/games/fireboywatergirl2.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://coolmathgames.com/0-fireboy-watergirl-2-light-temple'); timer()">Fireboy & Watergirl 2</button>
+        <button class="web coolmath search imagebutton" style="background-image: url(./img/games/fireboywatergirl3.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://coolmathgames.com/0-fireboy-watergirl-3-ice-temple'); timer()">Fireboy & Watergirl 3</button>
+        <button class="web coolmath search imagebutton" style="background-image: url(./img/games/fireboywatergirl4.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://coolmathgames.com/0-fireboy-watergirl-4-crystal-temple'); timer()">Fireboy & Watergirl 4</button>
+        <button class="web coolmath search imagebutton" style="background-image: url(./img/games/fireboywatergirl5.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://coolmathgames.com/0-fireboy-watergirl-5-elements'); timer()">Fireboy & Watergirl 5</button>
+        <button class="web coolmath search imagebutton" style="background-image: url(./img/games/fireboywatergirl6.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://coolmathgames.com/0-fireboy-watergirl-6-fairy-tales'); timer()">Fireboy & Watergirl 6</button>
+        <button class="web coolmath search imagebutton" style="background-image: url(./img/games/blockpig.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://coolmathgames.com/0-block-the-pig'); timer()">Block the Pig</button>
+        <button class="web coolmath search imagebutton" style="background-image: url(./img/games/iqball.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://www.coolmathgames.com/0-iq-ball'); timer()">IQBall</button>
+        <button class="web coolmath search imagebutton" style="background-image: url(./img/games/catchthecandy.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://www.coolmathgames.com/0-catch-the-candy'); timer()">Catch The Candy</button>
+        <button class="web coolmath search imagebutton" style="background-image: url(./img/games/catchthecandymech.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://www.coolmathgames.com/0-catch-the-candy-mech'); timer()">Catch the Candy Mech</button>
+        <button class="web coolmath search imagebutton" style="background-image: url(./img/games/catchthecandyhalloween.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://www.coolmathgames.com/0-catch-the-candy-halloween'); timer()">Catch The Candy Hallo</button>
+        <button class="web coolmath search imagebutton" style="background-image: url(./img/games/kickonline.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://www.coolmathgames.com/0-penalty-kick-online'); timer()">Penalty Kick Online</button>
+        <button class="web coolmath search imagebutton" style="background-image: url(./img/games/cannonbasketball.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://www.coolmathgames.com/0-cannon-basketball'); timer()">Cannon Basketball</button>
+        <button class="web coolmath search imagebutton" style="background-image: url(./img/games/cannonbasketball2.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://www.coolmathgames.com/0-cannon-basketball-2'); timer()">Cannon Basketball 2</button>
+        <button class="web coolmath search imagebutton" style="background-image: url(./img/games/cannonbasketball3.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://www.coolmathgames.com/0-cannon-basketball-3'); timer()">Cannon Basketball 3</button>
+        <button class="web coolmath search imagebutton" style="background-image: url(./img/games/cannonbasketball4.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://www.coolmathgames.com/0-cannon-basketball-4'); timer()">Cannon Basketball 4</button>
+        <button class="web coolmath search imagebutton" style="background-image: url(./img/games/bigtowertinysquare.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://www.coolmathgames.com/0-big-tower-tiny-square'); timer()">BigTowerTinySquare</button>
+        <button class="web coolmath search imagebutton" style="background-image: url(./img/games/bigicetowertinysquare.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://www.coolmathgames.com/0-big-ice-tower-tiny-square'); timer()">BigIceTowerTinySquare</button>
+        <button class="web coolmath search imagebutton" style="background-image: url(./img/games/run3.jpg); background-repeat: none;" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://www.coolmathgames.com/0-run-3')">Run 3</button>
+      <!-- File Html Games. -->
+        <button class="web search imagebutton" style="background-image: url(./img/games/vex3.jpg); background-repeat: none;" onclick="window.location.href='/gfiles/vex3/index.html'">Vex 3</button>
+        <button class="web search imagebutton" style="background-image: url(./img/games/vex4.jpg); background-repeat: none;" onclick="window.location.href='/gfiles/vex4/index.html'">Vex 4</button>
+        <button class="web search imagebutton" style="background-image: url(./img/games/vex5.jpg); background-repeat: none;" onclick="window.location.href='/gfiles/vex5/index.html'">Vex 5</button>
+        <button class="web search imagebutton" style="background-image: url(./img/games/2048.jpg); background-repeat: none;" onclick="window.location.href='/gfiles/2048/index.html'">2048</button>
+        <button class="web search imagebutton" style="background-image: url(./img/games/spacei.jpg); background-repeat: none;" onclick="window.location.href='/gfiles/spaceinvaders/index.html'">Space Invaders</button>
+        <button class="web search imagebutton" style="background-image: url(./img/games/doodle.jpg); background-repeat: none;" onclick="window.location.href='/gfiles/doodle-jump/index.html'">Doodle Jump</button>
+        <button class="web search imagebutton" style="background-image: url(./img/games/hexgl.jpg); background-repeat: none;" onclick="window.location.href='/gfiles/hexgl/index.html'">HexGL</button>
+        <button class="web search imagebutton" style="background-image: url(./img/games/motox3m.jpg); background-repeat: none;" onclick="window.location.href='/gfiles/motox3m/index.html'">Motox3m</button>
+        <button class="web search imagebutton" style="background-image: url(./gfiles/doom/doom.jpg); background-repeat: none;" onclick="window.location.href='/gfiles/doom/index.html'">DOOM</button>
+        </div>
+      </div>
+        </form>
+     </div>
+    </div>
+    <script src="./uv/uv.bundle.js"></script>
+    <script src="./uv/uv.config.js"></script>
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/settings.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1442755815241735"
+     crossorigin="anonymous"></script>
+    </body>
+</html>

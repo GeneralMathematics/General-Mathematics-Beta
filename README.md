@@ -39,8 +39,12 @@ $ npm start
 ## Replit Setup Guide
 
 Click the Replit button and choose Node.JS as the language.
-To setup on Replit, first click on the "Run on Replit" button. 
-
+To setup on Replit, first click on the "Run on Replit" button. After loading into your repl, run the following commands:
+```sh
+$ npm install
+$ chmod +x main.sh
+$ ./main.sh
+```
 On Repl, make sure to run the `git submodule update --init` command in shell.
 
 `http://localhost:8080/`

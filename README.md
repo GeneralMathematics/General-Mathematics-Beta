@@ -26,6 +26,7 @@
 
 [![Deploy to Heroku](https://raw.githubusercontent.com/BinBashBanana/deploy-buttons/master/buttons/remade/heroku.svg)](https://heroku.com/deploy/?template=https://github.com/GeneralMathematics/General-Mathematics-Beta)
 [![Run on Replit](https://raw.githubusercontent.com/BinBashBanana/deploy-buttons/master/buttons/remade/replit.svg)](https://replit.com/github/GeneralMathematics/General-Mathematics-Beta)
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/489Z4G?referralCode=quack)
 
 ## Basic Guide
 
